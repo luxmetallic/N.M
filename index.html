@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <title>Visual Business Card</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <style>
+    body {
+      background-color: #2D2D2D;
+      font-family: Arial, sans-serif;
+      color: #fff;
+      margin: 0;
+    }
+
+   .container {
+      max-width: 800px;
+      margin: 20px;
+      padding: 20px;
+      background-color: #f2f2f2;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      text-align: center;
+      position: relative;
+    }
+
+    h1 {
+      font-size: 20px;
+      font-family: "Calluna", sans-serif;
+      font-weight: 300;
+      color: #fff;
+      text-align: center;
+      margin: 10px auto;
+    }
+
+    /* Removed.pic a CSS rules */
+
+   .icon {
+      font-size: 30px;
+      color: #0077b5;
+    }
+
+    /* Create a container for social icons */
+   .social-icons-container3 {
+      background-color: #0C1823;
+      max-width: 465px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      margin: 5px auto;
+    }
+    /* Create a container for social icons */
+   .social-icons-container2 {
+      background-color: #0C1823;
+      max-width: 465px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      margin: 5px auto;
+    }
+
+    /* Create a container for social icons */
+   .social-icons-container {
+      background-color: #2D2D2D;
+      max-width: 465px;
+      height: 60px;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      margin: 5px auto;
+    }
+
+    /* Move the button to the left side */
+   .save-contact {
+      background-color: #FBE99E;
+      max-width: 465px;
+      height: 20px;
+      display: flex;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      align-items: center;
+      margin: 10px auto;
+    }
+
+   .pic-container {
+      background-color: #fff;
+      max-width: 392px;
+      max-height: 462px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+      position: relative;
+      align-items: center;
+      margin: 20px auto;
+    }
+
+   .pic-image {
+      width: 392px;
+      height: 492px;
+    }
+
+
+    /* Media query for mobile screens */
+    @media (max-width: 480px) {
+     .container {
+        padding: 50px;
+      }
+      h1 {
+        font-size: 16px;
+        text-align: center;
+        margin-bottom: 0.5px;
+      }
+
+     .icon {
+        font-size: 20px;
+        color: #0077b5;
+        margin-bottom: 10px;
+        text-align: center;
+      }
+
+     .social-icons-container3 {
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin: 2px;
+        margin-bottom: 20px;
+      }
+     .social-icons-container2 {
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin: 2px;
+        margin-bottom: 20px;
+      }
+     .social-icons-container1 {
+        max-width: 100%;
+        flex-wrap: wrap;
+        margin: 2px;
+        margin-bottom: 20px;
+      }
+
+     .save-contact {
+        margin-top: 10px;
+        padding: 20px;
+        text-align: center;
+      }
+    }
+
+  </style>
+
+<script>
+    function saveContact() {
+      // Get the contact information
+      var name = "Nicolas MATHEVET";
+      var phoneNumber = "+971552146564";
+      var whatsappNumber = "+971552146564";
+      var email = "nicolas.mathevet@icloud.com";
+      var companyName = "Nicolas Voyages et Découvertes FZ-LLC";
+      var websiteUrl = "https://www.nicolasdubai.guide/";var vCard = `BEGIN:VCARD
+VERSION:3.0
+N:${name};;;;
+ORG:${companyName}
+TEL;TYPE=CELL:${phoneNumber}
+TEL;TYPE=WHATSAPP:${whatsappNumber}
+EMAIL:${email}
+URL:${websiteUrl}
+END:VCARD`;
+
+      var dataUrl = "data:text/vcard;charset=utf-8," + encodeURIComponent(vCard);
+
+      window.open(dataUrl);
+    }
+</script>
+
+</head>
+
+<body>
+
+  <div class="pic-container">
+    <img src="logo1.png" alt="Description of the image" class="pic-image">
+  </div>
+
+  <div class="social-icons-container">
+    <a href="https://wa.link/6hcyno"><img src="whatsapp.png" alt="WhatsApp"></a>
+    <a href="https://www.instagram.com/nicolas.guide.dubai/"><img src="instagram.png" alt="Instagram"></a>
+    <a href="https://www.nicolasdubai.guide"><img src="web.png" alt="website"></a>
+    <a href="mailto:nicolas.mathevet@icloud.com"><img src="mail.png" alt="Email"></a>
+  </div>
+
+  <div class="save-contact">
+    <a href="#" onclick="saveContact()">
+      <img src="d.png" alt="Save Contact">
+    </a>
+  </div>
+
+</body>
+
+</html>
